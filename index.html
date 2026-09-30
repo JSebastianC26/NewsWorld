@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NewsWorld — Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <!-- Íconos (estilo Lucide) reutilizados con <use> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  </svg>
+
+  <!-- Navegación principal -->
+  <header class="nav">
+    <a class="marca" href="index.html"><span class="marca__logo">NW</span>NewsWorld</a>
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav aria-label="Principal">
+      <ul class="nav__links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="favoritos.html">Favoritos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero: bienvenida y noticia principal -->
+    <section class="hero">
+      <div class="hero__texto">
+        <p class="etiqueta hero__edicion">El informe diario</p>
+        <h1>Bienvenido a NewsWorld</h1>
+        <p class="hero__descripcion">Las noticias que importan, explicadas con claridad y contexto.</p>
+        <div class="hero__acciones">
+          <a class="btn btn--oscuro" href="noticias.html"><svg class="icono"><use href="#i-flecha"/></svg>Explora las últimas noticias</a>
+          <a class="btn" href="#sobre">Sobre NewsWorld</a>
+        </div>
+      </div>
+      <article class="destacada">
+        <div class="imagen" style="height:220px"><img src="img/informe-especial.png" alt="Informe especial" onerror="this.remove()"></div>
+        <div class="destacada__cuerpo">
+          <p class="etiqueta">Noticias mundiales</p>
+          <h2>Cinco historias que marcarán la semana</h2>
+          <p class="meta">6 min de lectura <svg class="icono" style="width:14px;height:14px"><use href="#i-flecha"/></svg></p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Noticias destacadas (tarjetas reutilizables) -->
+    <section class="seccion">
+      <div class="encabezado">
+        <p class="etiqueta">Selección del editor</p>
+        <h2 class="titulo-seccion">Noticias destacadas</h2>
+        <p>Tres historias que la redacción recomienda leer hoy.</p>
+      </div>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <div class="imagen"><img src="img/ciudades.png" alt="Ciudad con zonas verdes" onerror="this.remove()"></div>
+          <div class="tarjeta__cuerpo">
+            <time class="meta" datetime="2026-09-29">29 sep 2026</time>
+            <h3>Las ciudades replantean el espacio público para un futuro más cálido.</h3>
+            <p>Los urbanistas están transformando calles y azoteas olvidadas en espacios de reunión más frescos y resilientes.</p>
+            <a class="btn" href="detalle.html?id=1"><svg class="icono"><use href="#i-flecha"/></svg>Leer más</a>
+          </div>
+        </article>
+        <article class="tarjeta">
+          <div class="imagen"><img src="img/mar-profundo.png" alt="Ecosistema marino profundo" onerror="this.remove()"></div>
+          <div class="tarjeta__cuerpo">
+            <time class="meta" datetime="2026-09-28">28 sep 2026</time>
+            <h3>Comienza una nueva era de descubrimientos en las profundidades marinas.</h3>
+            <p>Los buques de investigación de bajo impacto están revelando ecosistemas extraordinarios sin perturbar hábitats frágiles.</p>
+            <a class="btn" href="detalle.html?id=2"><svg class="icono"><use href="#i-flecha"/></svg>Leer más</a>
+          </div>
+        </article>
+        <article class="tarjeta">
+          <div class="imagen"><img src="img/libreria.png" alt="Librería llena de lectores" onerror="this.remove()"></div>
+          <div class="tarjeta__cuerpo">
+            <time class="meta" datetime="2026-09-27">27 sep 2026</time>
+            <h3>Las librerías independientes construyen comunidad</h3>
+            <p>En las pequeñas localidades, los libreros locales están ampliando su papel mucho más allá de las estanterías.</p>
+            <a class="btn" href="detalle.html?id=3"><svg class="icono"><use href="#i-flecha"/></svg>Leer más</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sobre la plataforma -->
+    <section class="seccion seccion--blanca sobre" id="sobre">
+      <div class="sobre__visual" aria-hidden="true">
+        <div class="lineas"><i></i><i></i><i></i></div>
+        <div class="pasos"><span class="paso">Investigada</span><span class="paso">Revisada</span><span class="paso">Publicada</span></div>
+      </div>
+      <div class="sobre__texto">
+        <div class="encabezado">
+          <p class="etiqueta">Sobre la plataforma</p>
+          <h2 class="titulo-seccion">Noticias útiles. Contexto de confianza.</h2>
+        </div>
+        <p>NewsWorld es una plataforma de noticias moderna diseñada para facilitar la comprensión de historias complejas. Ofrecemos reportajes originales, fuentes fiables y explicaciones claras sobre actualidad internacional, ciencia, cultura, negocios y tecnología.</p>
+        <div class="cifras">
+          <div><strong>24/7</strong><span>Cobertura global</span></div>
+          <div><strong>12</strong><span>Mesas de redacción</span></div>
+          <div><strong>50+</strong><span>Colaboradores</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página (igual en todas las vistas) -->
+  <footer class="pie">
+    <div class="pie__contenido">
+      <div class="pie__marca"><strong>NewsWorld</strong><span>Información independiente y un contexto reflexivo para un mundo en transformación.</span></div>
+      <div class="pie__columna"><span class="etiqueta">Síguenos</span>
+        <div class="pie__redes"><a href="#">X / Twitter</a><a href="#">LinkedIn</a><a href="#">Instagram</a></div></div>
+      <div class="pie__columna"><span class="etiqueta">Contacto</span><a href="mailto:hello@newsworld.com">hello@newsworld.com</a></div>
+    </div>
+    <p class="pie__legal">© <span id="anio">2026</span> NewsWorld. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
